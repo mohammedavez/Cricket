@@ -8,7 +8,9 @@
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+	<form action="#" method="post">
 <div class="container">
+
 	<div class="team1">
 		<img class="team1-image" src="images/india.png"><br><br><br>
 	
@@ -20,7 +22,6 @@
     <option >Pakistan</option>
     <option >UAE</option>
   </select>
-
 	</div>	
 	<div class="vs">Vs</div>
 	<div class="team2">
@@ -35,7 +36,12 @@
   </select>
 
 	</div>
-</div>
+	<div class="submit"> 
+	<button class="push_button" type="submit">
+	Submit</button>
+	</div>
 
+</div>
+</form>
 </body>
 </html>
