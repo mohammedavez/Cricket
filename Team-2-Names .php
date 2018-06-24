@@ -4,7 +4,7 @@
 	<title>Team-1</title> 
 
 
-	<link rel="stylesheet" type="text/css" href="css/set-team-1.css"> 
+	<link rel="stylesheet" type="text/css" href="css/set-team-2.css"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -16,7 +16,7 @@
 		<div class="player-1 players">
 			<input type="text" name="player-1">
 			<select class="skill">
-     			<option>Select Team:</option>
+       		<option>Select Team:</option>
     			<option>Bats men</option>
    	 			<option>Bowler</option>
     			<option >All rounder</option>
@@ -112,7 +112,10 @@
     			<option >All rounder</option>
   			</select>
 		</div>
-	
+	<div class="submit"> 
+  <button class="push_button" type="submit">
+  Submit</button>
+  </div>
 </div>
 </form>
 </body>
