@@ -8,7 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<form action="#" method="post">
+
+	<form action="#">
 <div class="container">
 	<div class="heading">
    <h2>Set the Team</h2> 

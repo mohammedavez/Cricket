@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Team-1</title> 
-
-
+	<title>Team-2</title> 
 	<link rel="stylesheet" type="text/css" href="css/set-team-2.css"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
