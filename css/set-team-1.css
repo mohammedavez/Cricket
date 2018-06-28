@@ -76,8 +76,8 @@ background: linear-gradient(to right, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, F
 	
 }
 .container input[type="text"]{
-	background-image: url("../images/logos/batting-logo.png");
-	background-size: 40px 40px;
+	background-image: url("../images/logos/Allrounder.png");
+	background-size: 30px 30px;
 	background-repeat: no-repeat;
 	background-position: right;
 	width: 220px;
