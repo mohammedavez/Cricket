@@ -14,11 +14,11 @@
 	</div>
 	<div class="team-1 teams">
 		<img class="team1-img" src="images/india.png">
-		<input id="team1" type="radio" name="Team" value="">
+		<input id="team1" type="radio" name="Team" value="Team1">
 	</div>
 	<div class="team-2 teams">
 		<img class="team2-img" src="images/bangladesh.png">
-		<input id="team2" type="radio" name="Team" value="">
+		<input id="team2" type="radio" name="Team" value="Team2">
 	</div>
 	<div class="submit"> 
   <button class="push_button" type="submit" onclick="getTossWinner()">
