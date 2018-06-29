@@ -48,102 +48,181 @@
 													'p4_4_button()','p5_4_button()','p6_4_button()',
 													'p7_4_button()','p8_4_button()','p9_4_button()',
 													'p10_4_button()','p11_4_button()']
+				var six_button_classes = ['p1_6_class','p2_6_class','p3_6_class',
+												  'p4_6_class','p5_6_class','p6_6_class',
+												  'p7_6_class','p8_6_class','p9_6_class',
+												  'p10_6_class','p11_6_class']
+				
+				var one_button_classes = ['p1_1_class','p2_1_class','p3_1_class',
+												   'p4_1_class','p5_1_class','p6_1_class',
+												   'p7_1_class','p8_1_class','p9_1_class',
+												   'p10_1_class','p11_1_class']
+
+				var four_button_classes = ['p1_4_class','p2_4_class','p3_4_class',
+													'p4_4_class','p5_4_class','p6_4_class',
+													'p7_4_class','p8_4_class','p9_4_class',
+													'p10_4_class','p11_4_class']
+				var out_functions= ['p1_out()','p2_out()','p3_out()',
+										'p4_out()','p5_out()','p6_out()',
+										'p7_out()','p8_out()','p9_out()',
+										'p10_out()','p11_out()']
+var out_select_option_classes = ['p1_out_reason','p2_out_reason','p3_out_reason',												'p4_out_reason','p5_out_reason','p6_out_reason',
+										'p7_out_reason','p8_out_reason','p9_out_reason',
+										'p10_out_reason','p11_out_reason']
+var team_1_array = [JSON.parse(localStorage.getItem("Team-1-P1")),
+						 JSON.parse(localStorage.getItem("Team-1-P2")),
+						 JSON.parse(localStorage.getItem("Team-1-P3")),
+						 JSON.parse(localStorage.getItem("Team-1-P4")),
+						 JSON.parse(localStorage.getItem("Team-1-P5")),
+						 JSON.parse(localStorage.getItem("Team-1-P6")),
+						 JSON.parse(localStorage.getItem("Team-1-P7")),
+						 JSON.parse(localStorage.getItem("Team-1-P8")),
+						 JSON.parse(localStorage.getItem("Team-1-P9")),
+						 JSON.parse(localStorage.getItem("Team-1-P10")),
+						 JSON.parse(localStorage.getItem("Team-1-P11"))
+						   ]
+var team_2_array = [JSON.parse(localStorage.getItem("Team-2-P1")),
+						 JSON.parse(localStorage.getItem("Team-2-P2")),
+						 JSON.parse(localStorage.getItem("Team-2-P3")),
+						 JSON.parse(localStorage.getItem("Team-2-P4")),
+						 JSON.parse(localStorage.getItem("Team-2-P5")),
+						 JSON.parse(localStorage.getItem("Team-2-P6")),
+						 JSON.parse(localStorage.getItem("Team-2-P7")),
+						 JSON.parse(localStorage.getItem("Team-2-P8")),
+						 JSON.parse(localStorage.getItem("Team-2-P9")),
+						 JSON.parse(localStorage.getItem("Team-2-P10")),
+						 JSON.parse(localStorage.getItem("Team-2-P11"))
+						   ]
 				var tosswinner = localStorage.getItem("TossWinner")
 				var batorball  = localStorage.getItem("Batorball")
+
 				if(tosswinner=="Team1"  &&   batorball=="Batting"){
-				for(i=0;i<10;i++){
+				for(i=0;i<=10;i++){
 					document.write("<div class='"+player_gird_class[i]+"'>")
-					document.write("<p>"+localStorage.getItem(player_names[i])+"</p>")
+					document.write("<p>"+team_1_array[i][0]+"</p>")
 					document.write("</div>");
 				}
-				for(i=0;i<10;i++){
+				for(i=0;i<=10;i++){
 					document.write("<div class='"+score_per_player[i]+"'>")
 					document.write("<p>0</p>")
 					document.write("</div>");
 				}
-				for(i=0;i<10;i++){
+				for(i=0;i<=10;i++){
 					document.write("<div class='"+score_buttons[i]+"'>")
-					document.write("<button class='fourbutton' onclick="+four_button_functions[i]+" type='submit'></button>")
-					document.write("<button class='sixbutton' onclick="+six_button_functions[i]+" type='submit'></button>")
-					document.write("<button class='onebutton' onclick="+one_button_functions[i]+" type='submit'></button>")
-					document.write("<select class='player_out' >")
+					document.write("<button class='fourbutton "+four_button_classes[i]+"' onclick="+four_button_functions[i]+" type='submit'></button>")
+					document.write("<button class='sixbutton "+six_button_classes[i]+"' onclick="+six_button_functions[i]+" type='submit'></button>")
+					document.write("<button class='onebutton "+one_button_classes[i]+"' onclick="+one_button_functions[i]+" type='submit'></button>")
+					document.write("<select class='player_out "+out_select_option_classes[i]+"' onchange="+out_functions[i]+" >")
 					document.write("<option></option>")
 					document.write("<option>Not Out</option>")
-					document.write("<option>Not Out</option>")
-					document.write("<option>Not Out</option>")
+					document.write("<option>Caught Behind by the keeper</option>")
+					document.write("<option>Caught by a Fielder</option>")
+					document.write("<option>Caught & Bowled</option>")
+					document.write("<option>Leg Before Wicket</option>")
+					document.write("<option>Stumped</option>")
+					document.write("<option>Hit-wicket</option>")
+					document.write("<option>Timed-out</option>")
+					document.write("<option>Obstructing the Field</option>")
+					document.write("<option>Handling the Ball</option>")
+					document.write("<option>Run out</option>")
 					document.write("</select>")
 					document.write("</div>");
 				}
 			}else if(tosswinner=="Team1"  &&   batorball=="Bowling"){
 
-				for(i=0;i<10;i++){
+				for(i=0;i<=10;i++){
 					document.write("<div class='"+player_gird_class[i]+"'>")
-					document.write("<p>"+localStorage.getItem(player_names2[i])+"</p>")
+					document.write("<p>"+team_2_array[i][0]+"</p>")
 					document.write("</div>");
 				}
-				for(i=0;i<10;i++){
+				for(i=0;i<=10;i++){
 					document.write("<div class='"+score_per_player[i]+"'>")
 					document.write("<p>0</p>")
 					document.write("</div>");
 				}
-				for(i=0;i<10;i++){
+				for(i=0;i<=10;i++){
 					document.write("<div class='"+score_buttons[i]+"'>")
-					document.write("<button class='fourbutton' onclick="+four_button_functions[i]+" type='submit'></button>")
-					document.write("<button class='sixbutton' onclick="+six_button_functions[i]+" type='submit'></button>")
-					document.write("<button class='onebutton' onclick="+one_button_functions[i]+" type='submit'></button>")
-					document.write("<select class='player_out' >")
+					document.write("<button class='fourbutton "+four_button_classes[i]+"' onclick="+four_button_functions[i]+" type='submit'></button>")
+					document.write("<button class='sixbutton "+six_button_classes[i]+"' onclick="+six_button_functions[i]+" type='submit'></button>")
+					document.write("<button class='onebutton "+one_button_classes[i]+"' onclick="+one_button_functions[i]+" type='submit'></button>")
+					document.write("<select class='player_out "+out_select_option_classes[i]+"' onchange="+out_functions[i]+"  >")
+					document.write("<option></option>")
 					document.write("<option></option>")
 					document.write("<option>Not Out</option>")
-					document.write("<option>Not Out</option>")
-					document.write("<option>Not Out</option>")
+					document.write("<option>Caught Behind by the keeper</option>")
+					document.write("<option>Caught by a Fielder</option>")
+					document.write("<option>Caught & Bowled</option>")
+					document.write("<option>Leg Before Wicket</option>")
+					document.write("<option>Stumped</option>")
+					document.write("<option>Hit-wicket</option>")
+					document.write("<option>Timed-out</option>")
+					document.write("<option>Obstructing the Field</option>")
+					document.write("<option>Handling the Ball</option>")
+					document.write("<option>Run out</option>")
 					document.write("</select>")
 					document.write("</div>");
 				}
 			}else if(tosswinner=="Team2"  &&   batorball=="Batting"){
-				for(i=0;i<10;i++){
+				for(i=0;i<=10;i++){
 					document.write("<div class='"+player_gird_class[i]+"'>")
-					document.write("<p>"+localStorage.getItem(player_names2[i])+"</p>")
+					document.write("<p>"+team_2_array[i][0]+"</p>")
 					document.write("</div>");
 				}
-				for(i=0;i<10;i++){
+				for(i=0;i<=10;i++){
 					document.write("<div class='"+score_per_player[i]+"'>")
 					document.write("<p>0</p>")
 					document.write("</div>");
 				}
-				for(i=0;i<10;i++){
+				for(i=0;i<=10;i++){
 					document.write("<div class='"+score_buttons[i]+"'>")
-					document.write("<button class='fourbutton' onclick="+four_button_functions[i]+" type='submit'></button>")
-					document.write("<button class='sixbutton' onclick="+six_button_functions[i]+" type='submit'></button>")
-					document.write("<button class='onebutton' onclick="+one_button_functions[i]+" type='submit'></button>")
-					document.write("<select class='player_out' >")
+					document.write("<button class='fourbutton "+four_button_classes[i]+"' onclick="+four_button_functions[i]+" type='submit'></button>")
+					document.write("<button class='sixbutton "+six_button_classes[i]+"' onclick="+six_button_functions[i]+" type='submit'></button>")
+					document.write("<button class='onebutton "+one_button_classes[i]+"' onclick="+one_button_functions[i]+" type='submit'></button>")
+					document.write("<select class='player_out "+out_select_option_classes[i]+"' onchange="+out_functions[i]+"  >")
 					document.write("<option></option>")
 					document.write("<option>Not Out</option>")
-					document.write("<option>Not Out</option>")
-					document.write("<option>Not Out</option>")
+					document.write("<option>Caught Behind by the keeper</option>")
+					document.write("<option>Caught by a Fielder</option>")
+					document.write("<option>Caught & Bowled</option>")
+					document.write("<option>Leg Before Wicket</option>")
+					document.write("<option>Stumped</option>")
+					document.write("<option>Hit-wicket</option>")
+					document.write("<option>Timed-out</option>")
+					document.write("<option>Obstructing the Field</option>")
+					document.write("<option>Handling the Ball</option>")
+					document.write("<option>Run out</option>")
 					document.write("</select>")
 					document.write("</div>");
 				}
 			}else if(tosswinner=="Team2"  &&   batorball=="Bowling"){
-				for(i=0;i<10;i++){
+				for(i=0;i<=10;i++){
 					document.write("<div class='"+player_gird_class[i]+"'>")
-					document.write("<p>"+localStorage.getItem(player_names[i])+"</p>")
+					document.write("<p>"+team_1_array[i][0]+"</p>")
 					document.write("</div>");
 				}
-				for(i=0;i<10;i++){
+				for(i=0;i<=10;i++){
 					document.write("<div class='"+score_per_player[i]+"'>")
 					document.write("<p>0</p>")
 					document.write("</div>");
 				}
-				for(i=0;i<10;i++){
+				for(i=0;i<=10;i++){
 					document.write("<div class='"+score_buttons[i]+"'>")
-					document.write("<button class='fourbutton' onclick="+four_button_functions[i]+" type='submit'></button>")
-					document.write("<button class='sixbutton' onclick="+six_button_functions[i]+" type='submit'></button>")
-					document.write("<button class='onebutton' onclick="+one_button_functions[i]+" type='submit'></button>")
-					document.write("<select class='player_out' >")
+					document.write("<button class='fourbutton "+four_button_classes[i]+"' onclick="+four_button_functions[i]+" type='submit'></button>")
+					document.write("<button class='sixbutton "+six_button_classes[i]+"' onclick="+six_button_functions[i]+" type='submit'></button>")
+					document.write("<button class='onebutton "+one_button_classes[i]+"' onclick="+one_button_functions[i]+" type='submit'></button>")
+					document.write("<select class='player_out "+out_select_option_classes[i]+"' onchange="+out_functions[i]+"  >")
 					document.write("<option></option>")
 					document.write("<option>Not Out</option>")
-					document.write("<option>Not Out</option>")
-					document.write("<option>Not Out</option>")
+					document.write("<option>Caught Behind by the keeper</option>")
+					document.write("<option>Caught by a Fielder</option>")
+					document.write("<option>Caught & Bowled</option>")
+					document.write("<option>Leg Before Wicket</option>")
+					document.write("<option>Stumped</option>")
+					document.write("<option>Hit-wicket</option>")
+					document.write("<option>Timed-out</option>")
+					document.write("<option>Obstructing the Field</option>")
+					document.write("<option>Handling the Ball</option>")
+					document.write("<option>Run out</option>")
 					document.write("</select>")
 					document.write("</div>");
 				}

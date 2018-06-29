@@ -10,12 +10,16 @@ var playerNames = [document.getElementsByName('team1-player-1')[0].value,
 						document.getElementsByName('team1-player-9')[0].value,
 						document.getElementsByName('team1-player-10')[0].value,
 						document.getElementsByName('team1-player-11')[0].value];
+  var playerNamesAndScore = [[playerNames[0],0],[playerNames[1],0],[playerNames[2],0],
+                                     [playerNames[3],0],[playerNames[4],0],[playerNames[5],0],
+                                     [playerNames[6],0],[playerNames[7],0],[playerNames[8],0],
+                                     [playerNames[9],0],[playerNames[10],0]]
 	var keyValuesTeam1Names = ["Team-1-P1","Team-1-P2","Team-1-P3",
 										"Team-1-P4","Team-1-P5","Team-1-P6",
 										"Team-1-P7","Team-1-P8","Team-1-P9",
 										"Team-1-P10","Team-1-P11"]
-			for (var i =0; i < 10; i++) {
-				localStorage.setItem(keyValuesTeam1Names[i], playerNames[i]);
+			for (var i =0; i <= 10; i++) {
+				localStorage.setItem(keyValuesTeam1Names[i], JSON.stringify(playerNamesAndScore[i]));
 			}
 	}
 	function team1player1skill(){
