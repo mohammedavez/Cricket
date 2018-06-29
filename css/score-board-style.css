@@ -49,3 +49,45 @@ img:hover{
 	margin:0;
 	padding:0;
 }
+.player_out{
+	margin-top: 0;
+	padding: 0;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+	margin-left: 10px;
+	border-radius: 5px;
+	width: 30px;
+	height: 30px;
+	background-image: url("../images/logos/out.jpg");
+	background-repeat: no-repeat;
+	background-size: 30px 30px;
+	color: red;
+}
+.player_out option{
+	margin:0;
+	padding: 0; vertical-align: middle;
+
+}
+button{
+	width: 30px;
+	height: 30px;
+	margin-left: 10px;
+	border:none;
+}
+.fourbutton{
+background-image: url('../images/logos/4button.jpg');
+background-repeat: no-repeat;
+	background-size: 30px 30px;
+}
+.sixbutton{
+background-image: url('../images/logos/sixbutton.jpg');
+background-repeat: no-repeat;
+	background-size: 30px 30px;
+}
+.onebutton{
+background-image: url('../images/logos/onebutton.jpg');
+background-repeat: no-repeat;
+background-size: 30px 30px;
+}
