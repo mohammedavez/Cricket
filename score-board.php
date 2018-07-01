@@ -263,21 +263,23 @@ var team_2_array = [JSON.parse(localStorage.getItem("Team-2-P1")),
 							['p10_ball1','p10_ball2','p10_ball3','p10_ball4','p10_ball5','p10_ball6'],
 							['p11_ball1','p11_ball2','p11_ball3','p11_ball4','p11_ball5','p11_ball6']
 							]
-				var over_increment=['p1_over_button','p2_over_button','p3_over_button',
-										'p4_over_button','p5_over_button','p6_over_button',
-										'p7_over_button','p8_over_button','p9_over_button',
-										'p10_over_button','p11_over_button']
+	var over_increment=['p1_over_button','p2_over_button','p3_over_button',
+							'p4_over_button','p5_over_button','p6_over_button',
+							'p7_over_button','p8_over_button','p9_over_button',
+							'p10_over_button','p11_over_button']
+	var over_button_functions=["p1_button_fun()","p2_button_fun()","p3_button_fun()",
+									  "p4_button_fun()","p5_button_fun()","p6_button_fun()",
+									  "p7_button_fun()","p8_button_fun()","p9_button_fun()",
+									  "p10_button_fun()","p11_button_fun()"]
 			if(tosswinner=="Team1"  &&   batorball=="Batting"){
 					document.write("<h2 class='heading2'>"+localStorage.getItem("Team-2-Name")+"</h2>")
-				for(i=0;i<=10;i++){
+				for(var i=0;i<=10;i++){
 					document.write("<div class='"+playert2_gird_class[i]+"'>")
 					document.write("<p>"+team_2_array[i][0]+"</p>")
 					document.write("</div>");
 				}
-				for(i=0;i<=10;i++){
-					document.write("<div class='"+over_per_player[i]+"'>")
-					document.write("<p>0.0</p>")
-					document.write("</div>");
+				for(var i=0;i<=10;i++){
+					document.write("<p class='"+over_per_player[i]+"'>0.0</p>")
 				}
 				for(var i=0;i<=10;i++){
 					for(var j=0;j<=5;j++){
@@ -285,7 +287,9 @@ var team_2_array = [JSON.parse(localStorage.getItem("Team-2-P1")),
 					}
 				}
 				for(var i=0;i<=10;i++){
-					document.write("<button class='over_increment "+over_increment[i]+" ' type='submit'></button>")
+					document.write("<div class='"+over_increment[i]+"'>")
+					document.write("<button class='over_increment' onclick='"+over_button_functions[i]+"' type='submit'></button>")
+					document.write("</div>")
 				}
 			}
 			else if(tosswinner=="Team1"  &&   batorball=="Bowling"){
@@ -296,9 +300,7 @@ var team_2_array = [JSON.parse(localStorage.getItem("Team-2-P1")),
 					document.write("</div>");
 				}
 				for(i=0;i<=10;i++){
-					document.write("<div class='"+over_per_player[i]+"'>")
-					document.write("<p>0.0</p>")
-					document.write("</div>");
+					document.write("<p class='"+over_per_player[i]+"'>0.0</p>")
 				}
 			for(var i=0;i<=10;i++){
 					for(var j=0;j<=5;j++){
@@ -314,9 +316,7 @@ var team_2_array = [JSON.parse(localStorage.getItem("Team-2-P1")),
 					document.write("</div>");
 				}
 				for(i=0;i<=10;i++){
-					document.write("<div class='"+over_per_player[i]+"'>")
-					document.write("<p>0.0</p>")
-					document.write("</div>");
+					document.write("<p class='"+over_per_player[i]+"'>0.0</p>")
 				}
 				for(var i=0;i<=10;i++){
 					for(var j=0;j<=5;j++){
@@ -332,9 +332,7 @@ var team_2_array = [JSON.parse(localStorage.getItem("Team-2-P1")),
 					document.write("</div>");
 				}
 				for(i=0;i<=10;i++){
-					document.write("<div class='"+over_per_player[i]+"'>")
-					document.write("<p>0.0</p>")
-					document.write("</div>");
+					document.write("<p class='"+over_per_player[i]+"'>0.0</p>")
 				}
 				for(var i=0;i<=10;i++){
 					for(var j=0;j<=5;j++){
