@@ -16,7 +16,6 @@ background: linear-gradient(to right, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, F
 .teams{
 	background-color: black;
 	opacity: 0.4;
-	background-color: black;
 	border:1px solid black;
 }
 .team-1{
@@ -25,8 +24,33 @@ background: linear-gradient(to right, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, F
 	grid-column: 1;
 }
 .team-2{
+	overflow: auto;
 	grid-row: 2/6;
 	grid-column: 2;
+}
+.team-total-overs{
+float: right;
+margin-right: 30px;
+background-color: red;
+width: 605px;
+opacity: 0.4;
+padding: 5px;
+font-size: 28px;
+color: white;
+}
+.team-total-score{
+background-color: red;
+width: 605px;
+margin-left: 30px;
+opacity: 0.4;
+padding: 5px;
+font-size: 28px;
+color: white;
+}
+.team-total-score .score{
+	float: right;
+	margin-right: 345px;
+
 }
 .nested-grid{
 	display: grid;
@@ -35,6 +59,41 @@ background: linear-gradient(to right, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, F
 	color: white;
 	font-size: 30px;
 	height:500px;
+}
+.nested-grid2{
+	display: grid;
+	grid-template-columns: repeat(6,1fr);
+	grid-auto-rows: minmax(80px, auto);
+	color: white;
+	font-size: 30px;
+	height:500px;
+}
+.heading{
+	text-transform: uppercase;
+	grid-row: 1;
+	grid-column: 2/5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 3px;
+
+}
+.heading2{
+	text-transform: uppercase;
+	grid-row: 1;
+	grid-column: 2/6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 3px;
+}
+.balls{
+	font-size: 30px;
+}
+.over_increment{
+	background-image: url("../images/logos/overincrement.jpg");
+	background-size: 60px 30px;
+	background-repeat: no-repeat;
 }
 img{
 	width: 30px;

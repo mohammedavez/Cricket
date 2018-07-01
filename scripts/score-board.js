@@ -6,9 +6,9 @@ var score_per_player =['p1_score','p2_score','p3_score',
 							'p7_score','p8_score','p9_score',
 							'p10_score','p11_score']
 var score_buttons_player =['score_buttons1','score_buttons2','score_buttons3',
-										'score_buttons4','score_buttons5','score_buttons6',
-										'score_buttons7','score_buttons8','score_buttons9',
-										'score_buttons10','score_buttons11']
+								 'score_buttons4','score_buttons5','score_buttons6',
+								 'score_buttons7','score_buttons8','score_buttons9',
+								 'score_buttons10','score_buttons11']
 
 for(i=0;i<=10;i++){
 document.getElementsByClassName(player_gird_class_style[i])[0].style.gridRow=i+2;
@@ -23,18 +23,21 @@ document.getElementsByClassName(score_buttons_player[i])[0].style.gridRow=i+2;
 document.getElementsByClassName(score_buttons_player[i])[0].style.gridColumn="4/6";
 }
 var player_names_update =['Team-1-P1','Team-1-P2','Team-1-P3',
-										'Team-1-P4','Team-1-P5','Team-1-P6',
-										'Team-1-P7','Team-1-P8','Team-1-P9',
-										'Team-1-P10','Team-1-P11']
+								  'Team-1-P4','Team-1-P5','Team-1-P6',
+								  'Team-1-P7','Team-1-P8','Team-1-P9',
+								  'Team-1-P10','Team-1-P11']
 				
-				var player_names2_update =['Team-2-P1','Team-2-P2','Team-2-P3',
-										'Team-2-P4','Team-2-P5','Team-2-P6',
-										'Team-2-P7','Team-2-P8','Team-2-P9',
-										'Team-2-P10','Team-2-P11']
+var player_names2_update =['Team-2-P1','Team-2-P2','Team-2-P3',
+									'Team-2-P4','Team-2-P5','Team-2-P6',
+									'Team-2-P7','Team-2-P8','Team-2-P9',
+									'Team-2-P10','Team-2-P11']
 var tosswinnerfor
 function p1_4_button(){
 	var value =parseInt(document.querySelector(".p1_score p").innerHTML);
 	value = value+4;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+4;
+	document.querySelector(".score").innerHTML= total_score
 	if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array2 = JSON.parse(localStorage.getItem("Team-1-P1"));
 	array2[1]=value;
@@ -58,6 +61,9 @@ function p1_4_button(){
 function p1_6_button(){
 	var value =parseInt(document.querySelector(".p1_score p").innerHTML);
 	value = value+6;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+6;
+	document.querySelector(".score").innerHTML= total_score
 	if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array2 = JSON.parse(localStorage.getItem("Team-1-P1"));
 	array2[1]=value;
@@ -80,6 +86,9 @@ function p1_6_button(){
 function p1_1_button(){
 	var value =parseInt(document.querySelector(".p1_score p").innerHTML);
 	value = value+1;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+1;
+	document.querySelector(".score").innerHTML= total_score
 	if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array2 = JSON.parse(localStorage.getItem("Team-1-P1"));
 	array2[1]=value;
@@ -103,6 +112,9 @@ function p1_1_button(){
 function p2_4_button(){
 	var value =parseInt(document.querySelector(".p2_score p").innerHTML);
 	value = value+4;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+4;
+	document.querySelector(".score").innerHTML= total_score
 	if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array3 = JSON.parse(localStorage.getItem("Team-1-P2"));
 	array3[1]=value;
@@ -125,6 +137,9 @@ function p2_4_button(){
 function p2_6_button(){
 	var value =parseInt(document.querySelector(".p2_score p").innerHTML);
 	value = value+6;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+6;
+	document.querySelector(".score").innerHTML= total_score
 	if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array3 = JSON.parse(localStorage.getItem("Team-1-P2"));
 	array3[1]=value;
@@ -147,6 +162,9 @@ function p2_6_button(){
 function p2_1_button(){
 	var value =parseInt(document.querySelector(".p2_score p").innerHTML);
 	value = value+1;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+1;
+	document.querySelector(".score").innerHTML= total_score
 	if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array3 = JSON.parse(localStorage.getItem("Team-1-P2"));
 	array3[1]=value;
@@ -169,6 +187,9 @@ function p2_1_button(){
 function p3_4_button(){
 	var value =parseInt(document.querySelector(".p3_score p").innerHTML);
 	value = value+4;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+4;
+	document.querySelector(".score").innerHTML= total_score
 	if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array4 = JSON.parse(localStorage.getItem("Team-1-P3"));
 	array4[1]=value;
@@ -191,6 +212,9 @@ function p3_4_button(){
 function p3_6_button(){
 	var value =parseInt(document.querySelector(".p3_score p").innerHTML);
 	value = value+6;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+6;
+	document.querySelector(".score").innerHTML= total_score
 if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array4 = JSON.parse(localStorage.getItem("Team-1-P3"));
 	array4[1]=value;
@@ -213,6 +237,9 @@ if(tosswinner=="Team1"  &&   batorball=="Batting"){
 function p3_1_button(){
 	var value =parseInt(document.querySelector(".p3_score p").innerHTML);
 	value = value+1;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+1;
+	document.querySelector(".score").innerHTML= total_score
 if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array4 = JSON.parse(localStorage.getItem("Team-1-P3"));
 	array4[1]=value;
@@ -235,6 +262,9 @@ if(tosswinner=="Team1"  &&   batorball=="Batting"){
 function p4_4_button(){
 	var value =parseInt(document.querySelector(".p4_score p").innerHTML);
 	value = value+4;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+4;
+	document.querySelector(".score").innerHTML= total_score
 if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array5 = JSON.parse(localStorage.getItem("Team-1-P4"));
 	array5[1]=value;
@@ -257,6 +287,9 @@ if(tosswinner=="Team1"  &&   batorball=="Batting"){
 function p4_6_button(){
 	var value =parseInt(document.querySelector(".p4_score p").innerHTML);
 	value = value+6;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+6;
+	document.querySelector(".score").innerHTML= total_score
 	if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array5 = JSON.parse(localStorage.getItem("Team-1-P4"));
 	array5[1]=value;
@@ -279,6 +312,9 @@ function p4_6_button(){
 function p4_1_button(){
 	var value =parseInt(document.querySelector(".p4_score p").innerHTML);
 	value = value+1;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+1;
+	document.querySelector(".score").innerHTML= total_score
 	if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array5 = JSON.parse(localStorage.getItem("Team-1-P4"));
 	array5[1]=value;
@@ -301,6 +337,9 @@ function p4_1_button(){
 function p5_4_button(){
 	var value =parseInt(document.querySelector(".p5_score p").innerHTML);
 	value = value+4;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+4;
+	document.querySelector(".score").innerHTML= total_score
 	if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array6 = JSON.parse(localStorage.getItem("Team-1-P5"));
 	array6[1]=value;
@@ -323,6 +362,9 @@ function p5_4_button(){
 function p5_6_button(){
 	var value =parseInt(document.querySelector(".p5_score p").innerHTML);
 	value = value+6;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+6;
+	document.querySelector(".score").innerHTML= total_score
 	if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array6 = JSON.parse(localStorage.getItem("Team-1-P5"));
 	array6[1]=value;
@@ -345,6 +387,9 @@ function p5_6_button(){
 function p5_1_button(){
 	var value =parseInt(document.querySelector(".p5_score p").innerHTML);
 	value = value+1;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+1;
+	document.querySelector(".score").innerHTML= total_score
 	if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array6 = JSON.parse(localStorage.getItem("Team-1-P5"));
 	array6[1]=value;
@@ -367,6 +412,9 @@ function p5_1_button(){
 function p6_4_button(){
 	var value =parseInt(document.querySelector(".p6_score p").innerHTML);
 	value = value+4;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+4;
+	document.querySelector(".score").innerHTML= total_score
 	if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array7 = JSON.parse(localStorage.getItem("Team-1-P6"));
 	array7[1]=value;
@@ -389,6 +437,9 @@ function p6_4_button(){
 function p6_6_button(){
 	var value =parseInt(document.querySelector(".p6_score p").innerHTML);
 	value = value+6;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+6;
+	document.querySelector(".score").innerHTML= total_score
 		if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array7 = JSON.parse(localStorage.getItem("Team-1-P6"));
 	array7[1]=value;
@@ -411,6 +462,9 @@ function p6_6_button(){
 function p6_1_button(){
 	var value =parseInt(document.querySelector(".p6_score p").innerHTML);
 	value = value+1;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+1;
+	document.querySelector(".score").innerHTML= total_score
 		if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array7 = JSON.parse(localStorage.getItem("Team-1-P6"));
 	array7[1]=value;
@@ -433,6 +487,9 @@ function p6_1_button(){
 function p7_4_button(){
 	var value =parseInt(document.querySelector(".p7_score p").innerHTML);
 	value = value+4;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+4;
+	document.querySelector(".score").innerHTML= total_score
 		if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array8 = JSON.parse(localStorage.getItem("Team-1-P7"));
 	array8[1]=value;
@@ -455,6 +512,9 @@ function p7_4_button(){
 function p7_6_button(){
 	var value =parseInt(document.querySelector(".p7_score p").innerHTML);
 	value = value+6;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+6;
+	document.querySelector(".score").innerHTML= total_score
 		if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array8 = JSON.parse(localStorage.getItem("Team-1-P7"));
 	array8[1]=value;
@@ -477,6 +537,9 @@ function p7_6_button(){
 function p7_1_button(){
 	var value =parseInt(document.querySelector(".p7_score p").innerHTML);
 	value = value+1;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+1;
+	document.querySelector(".score").innerHTML= total_score
 		if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array8 = JSON.parse(localStorage.getItem("Team-1-P7"));
 	array8[1]=value;
@@ -499,6 +562,9 @@ function p7_1_button(){
 function p8_4_button(){
 	var value =parseInt(document.querySelector(".p8_score p").innerHTML);
 	value = value+4;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+4;
+	document.querySelector(".score").innerHTML= total_score
 		if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array9 = JSON.parse(localStorage.getItem("Team-1-P8"));
 	array9[1]=value;
@@ -521,6 +587,9 @@ function p8_4_button(){
 function p8_6_button(){
 	var value =parseInt(document.querySelector(".p8_score p").innerHTML);
 	value = value+6;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+6;
+	document.querySelector(".score").innerHTML= total_score
 	if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array9 = JSON.parse(localStorage.getItem("Team-1-P8"));
 	array9[1]=value;
@@ -543,6 +612,9 @@ function p8_6_button(){
 function p8_1_button(){
 	var value =parseInt(document.querySelector(".p8_score p").innerHTML);
 	value = value+1;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+1;
+	document.querySelector(".score").innerHTML= total_score
 	if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array9 = JSON.parse(localStorage.getItem("Team-1-P8"));
 	array9[1]=value;
@@ -565,6 +637,9 @@ function p8_1_button(){
 function p9_4_button(){
 	var value =parseInt(document.querySelector(".p9_score p").innerHTML);
 	value = value+4;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+4;
+	document.querySelector(".score").innerHTML= total_score
 	if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array10 = JSON.parse(localStorage.getItem("Team-1-P9"));
 	array10[1]=value;
@@ -587,6 +662,9 @@ function p9_4_button(){
 function p9_6_button(){
 	var value =parseInt(document.querySelector(".p9_score p").innerHTML);
 	value = value+6;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+6;
+	document.querySelector(".score").innerHTML= total_score
 		if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array10 = JSON.parse(localStorage.getItem("Team-1-P9"));
 	array10[1]=value;
@@ -609,6 +687,9 @@ function p9_6_button(){
 function p9_1_button(){
 	var value =parseInt(document.querySelector(".p9_score p").innerHTML);
 	value = value+1;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+1;
+	document.querySelector(".score").innerHTML= total_score
 		if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array10 = JSON.parse(localStorage.getItem("Team-1-P9"));
 	array10[1]=value;
@@ -631,6 +712,9 @@ function p9_1_button(){
 function p10_4_button(){
 	var value =parseInt(document.querySelector(".p10_score p").innerHTML);
 	value = value+4;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+4;
+	document.querySelector(".score").innerHTML= total_score
 		if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array11 = JSON.parse(localStorage.getItem("Team-1-P10"));
 	array11[1]=value;
@@ -653,6 +737,9 @@ function p10_4_button(){
 function p10_6_button(){
 	var value =parseInt(document.querySelector(".p10_score p").innerHTML);
 	value = value+6;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+6;
+	document.querySelector(".score").innerHTML= total_score
 		if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array11 = JSON.parse(localStorage.getItem("Team-1-P10"));
 	array11[1]=value;
@@ -675,6 +762,9 @@ function p10_6_button(){
 function p10_1_button(){
 	var value =parseInt(document.querySelector(".p10_score p").innerHTML);
 	value = value+1;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+1;
+	document.querySelector(".score").innerHTML= total_score
 		if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array11 = JSON.parse(localStorage.getItem("Team-1-P10"));
 	array11[1]=value;
@@ -697,6 +787,9 @@ function p10_1_button(){
 function p11_4_button(){
 	var value =parseInt(document.querySelector(".p11_score p").innerHTML);
 	value = value+4;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+4;
+	document.querySelector(".score").innerHTML= total_score
 		if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array12 = JSON.parse(localStorage.getItem("Team-1-P11"));
 	array12[1]=value;
@@ -719,6 +812,9 @@ function p11_4_button(){
 function p11_6_button(){
 	var value =parseInt(document.querySelector(".p11_score p").innerHTML);
 	value = value+6;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+6;
+	document.querySelector(".score").innerHTML= total_score
 			if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array12 = JSON.parse(localStorage.getItem("Team-1-P11"));
 	array12[1]=value;
@@ -741,6 +837,9 @@ function p11_6_button(){
 function p11_1_button(){
 	var value =parseInt(document.querySelector(".p11_score p").innerHTML);
 	value = value+1;
+	var total_score =parseInt(document.querySelector(".score").innerHTML);
+	total_score=total_score+1;
+	document.querySelector(".score").innerHTML= total_score
 			if(tosswinner=="Team1"  &&   batorball=="Batting"){
 	var array12 = JSON.parse(localStorage.getItem("Team-1-P11"));
 	array12[1]=value;
